@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/btnFileChooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="5dp"
+        android:text="Choose .ISO File"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnBackupCDROMPatition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnFlashNewCDROMPatition"
+        android:layout_alignRight="@+id/btnFlashNewCDROMPatition"
+        android:layout_below="@+id/btnFileChooser"
+        android:layout_marginTop="27dp"
+        android:text="Backup CDROM Partition"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnFlashNewCDROMPatition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnFileChooser"
+        android:layout_alignRight="@+id/btnFileChooser"
+        android:layout_below="@+id/btnBackupCDROMPatition"
+        android:layout_marginTop="26dp"
+        android:text="Flash New CDROM Patition"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnFlashNewCDROMPatition"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="textMultiLine"
+        android:paddingBottom="40dp"
+        android:paddingTop="35dp"
+        android:text="This app requires Root access. You will need to Allow Access. To mount the 'CD-ROM' partition on your computer you may be required to disable USB Debugging or enable USB Mass Storage. The size of your device's 'CD-ROM' partition varies. Under or around 200MB is a safe bet for most."
+        android:textColor="#FFFFFF" >
+
+        <requestFocus />
+    </EditText>
+    
+</RelativeLayout>
