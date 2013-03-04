@@ -77,18 +77,34 @@ public class MainActivity extends Activity {
 				    {
 						process = "dd if=/dev/block/mmcblk1p16 of="+Environment.getExternalStorageDirectory().getPath()+"/"+"backupCDROM.iso";	
 				    } 
-					else if(Phone.contentEquals("vanquish")) //droid razr hd & razr hd
+					else if(Phone.contentEquals("vanquish")) //droid razr hd 
 				    {
 						process = "dd if=/dev/block/platform/msm_sdcc.1/by-name/cdrom of="+Environment.getExternalStorageDirectory().getPath()+"/"+"backupCDROM.iso";
 				    } 
+					else if(Phone.contentEquals("vanquish_u")) //moto razr hd
+				    {
+						process = "dd if=/dev/block/platform/msm_sdcc.1/by-name/cdrom of="+Environment.getExternalStorageDirectory().getPath()+"/"+"backupCDROM.iso";
+				    }
 					else if(Phone.contentEquals("dinara")) //moto atrix hd
 				    {
 						process = "dd if=/dev/block/platform/msm_sdcc.1/by-name/cdrom of="+Environment.getExternalStorageDirectory().getPath()+"/"+"backupCDROM.iso";
 				    } 
-					else if(Phone.contentEquals("scorpion_mini")) //droid razr m & razr m
+					else if(Phone.contentEquals("qinara")) //moto atrix hd
+				    {
+						process = "dd if=/dev/block/platform/msm_sdcc.1/by-name/cdrom of="+Environment.getExternalStorageDirectory().getPath()+"/"+"backupCDROM.iso";
+				    }
+					else if(Phone.contentEquals("scorpion_mini")) //droid razr m 
 				    {
 						process = "dd if=/dev/block/platform/msm_sdcc.1/by-name/cdrom of="+Environment.getExternalStorageDirectory().getPath()+"/"+"backupCDROM.iso";
 				    } 
+					else if(Phone.contentEquals("scorpion_mini_u")) //moto razr m
+				    {
+						process = "dd if=/dev/block/platform/msm_sdcc.1/by-name/cdrom of="+Environment.getExternalStorageDirectory().getPath()+"/"+"backupCDROM.iso";
+				    }
+					else if(Phone.contentEquals("scorpion_mini_t")) //moto razr m - Japan 201M
+				    {
+						process = "dd if=/dev/block/platform/msm_sdcc.1/by-name/cdrom of="+Environment.getExternalStorageDirectory().getPath()+"/"+"backupCDROM.iso";
+				    }
 					else if(Phone.contentEquals("asanti_c")) //Moto Photon Q
 				    {
 						process = "dd if=/dev/block/platform/msm_sdcc.1/by-name/cdrom of="+Environment.getExternalStorageDirectory().getPath()+"/"+"backupCDROM.iso";
@@ -141,7 +157,11 @@ public class MainActivity extends Activity {
 				    {
 						process = "dd if="+MainActivity.filename+" of="+"/dev/block/mmcblk1p16";
 				    } 
-					else if(Phone.contentEquals("vanquish")) //droid razr hd & razr hd
+					else if(Phone.contentEquals("vanquish")) //droid razr hd
+				    {	
+						process = "dd if="+MainActivity.filename+" of=/dev/block/platform/msm_sdcc.1/by-name/cdrom";
+				    } 
+					else if(Phone.contentEquals("vanquish_u")) //moto razr hd
 				    {	
 						process = "dd if="+MainActivity.filename+" of=/dev/block/platform/msm_sdcc.1/by-name/cdrom";
 				    } 
@@ -149,7 +169,19 @@ public class MainActivity extends Activity {
 				    {
 						process = "dd if="+MainActivity.filename+" of=/dev/block/platform/msm_sdcc.1/by-name/cdrom";
 				    } 
-					else if(Phone.contentEquals("scorpion_mini")) //droid razr m & razr m
+					else if(Phone.contentEquals("qinara")) //moto atrix hd
+				    {
+						process = "dd if="+MainActivity.filename+" of=/dev/block/platform/msm_sdcc.1/by-name/cdrom";
+				    } 
+					else if(Phone.contentEquals("scorpion_mini")) //droid razr m
+				    {
+						process = "dd if="+MainActivity.filename+" of=/dev/block/platform/msm_sdcc.1/by-name/cdrom";
+				    } 
+					else if(Phone.contentEquals("scorpion_mini_u")) //moto razr m
+				    {
+						process = "dd if="+MainActivity.filename+" of=/dev/block/platform/msm_sdcc.1/by-name/cdrom";
+				    } 
+					else if(Phone.contentEquals("scorpion_mini_t")) //moto razr m - Japan 201M
 				    {
 						process = "dd if="+MainActivity.filename+" of=/dev/block/platform/msm_sdcc.1/by-name/cdrom";
 				    } 
