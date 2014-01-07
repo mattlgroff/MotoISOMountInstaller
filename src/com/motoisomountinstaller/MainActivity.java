@@ -97,6 +97,10 @@ public class MainActivity extends Activity {
 				    {
 						process = "dd if=/dev/block/platform/msm_sdcc.1/by-name/cdrom of="+Environment.getExternalStorageDirectory().getPath()+"/"+"backupCDROM.iso";
 				    } 
+				    	else if(Phone.contentEquals("XT907_verizon")) //droid razr m 
+				    {
+						process = "dd if=/dev/block/platform/msm_sdcc.1/by-name/cdrom of="+Environment.getExternalStorageDirectory().getPath()+"/"+"backupCDROM.iso";
+				    } 
 					else if(Phone.contentEquals("scorpion_mini_u")) //moto razr m
 				    {
 						process = "dd if=/dev/block/platform/msm_sdcc.1/by-name/cdrom of="+Environment.getExternalStorageDirectory().getPath()+"/"+"backupCDROM.iso";
@@ -174,6 +178,10 @@ public class MainActivity extends Activity {
 						process = "dd if="+MainActivity.filename+" of=/dev/block/platform/msm_sdcc.1/by-name/cdrom";
 				    } 
 					else if(Phone.contentEquals("scorpion_mini")) //droid razr m
+				    {
+						process = "dd if="+MainActivity.filename+" of=/dev/block/platform/msm_sdcc.1/by-name/cdrom";
+				    } 
+				    	else if(Phone.contentEquals("XT907_verizon")) //droid razr m 
 				    {
 						process = "dd if="+MainActivity.filename+" of=/dev/block/platform/msm_sdcc.1/by-name/cdrom";
 				    } 
